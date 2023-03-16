@@ -1,0 +1,32 @@
+@hostname = http://localhost:7001
+### 获取事件列表
+GET {{hostname}}/queryEventList
+?userID=1
+
+### 新增事件
+POST {{hostname}}/addEvent
+Content-Type: application/json
+
+{
+  "userID":1,
+  "content":"324242"
+}
+
+### 删除事件
+POST {{hostname}}/deleEvent
+Content-Type: application/json
+
+{
+  "id":1,
+  "userID":1
+}
+
+### 更新事件
+POST {{hostname}}/updateEvent
+Content-Type: application/json
+
+{
+  "id":2,
+  "userID":1,
+  "content":"324242"
+}
